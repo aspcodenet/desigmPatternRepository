@@ -1,0 +1,20 @@
+﻿@model  List<NorthwindWeb.Models.Supplier>
+
+<h1>Lista av suppliers</h1>
+
+<table class="table">
+    <tr>
+        <td>SupplierID</td>
+        <td>Namn</td>
+    </tr>
+    @foreach(var supplier in Model)
+    {
+        <tr>
+            <td>@supplier.SupplierID</td>
+            <td><a href="/Home/Supplier?ID=@supplier.SupplierID">
+    @supplier.ContactName
+</a>
+            </td>
+        </tr>
+    }
+</table>
